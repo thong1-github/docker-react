@@ -6,4 +6,4 @@ before_install:
   - docker build -t thong1/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run thong1/docker-react npm run test -- --coverage
+  - docker run -e CI=true thong1/docker-react npm run test
